@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.name{
+  color: royalblue;
+}
+
+.customColorMode{
+  font-weight: bolder;
+  margin: 0 1% 0 0.25%;
+}
