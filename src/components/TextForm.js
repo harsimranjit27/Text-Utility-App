@@ -61,16 +61,16 @@ export default function TextForm(props) {
                 <textarea value={text} onChange={handleOnChange} className="form-control" style={{backgroundColor: props.mode==="dark"?"#2d2e2d":"white",
             color: props.mode==="dark"?"white":"black"}} id="myBox" rows="8" ></textarea>
             </div>
-            <button className={`btn btn-${props.btnColor} mx-2`} onClick={handleUppercaseClick}>Convert to uppercase</button> 
-            <button className={`btn btn-${props.btnColor} mx-2`} onClick={handleLowercaseClick}>Convert to lowercase</button> 
-            <button className={`btn btn-${props.btnColor} mx-2`} onClick={handleClearText}>Clear</button> 
-            <button className={`btn btn-${props.btnColor} mx-2`} onClick={handleCopyText}>Copy Text</button> 
-            <button className={`btn btn-${props.btnColor} mx-2`} onClick={removeExtraSpaces}>Remove extra spaces</button> 
+            <button className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={handleUppercaseClick}>Convert to uppercase</button> 
+            <button className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={handleLowercaseClick}>Convert to lowercase</button> 
+            <button className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={handleClearText}>Clear</button> 
+            <button className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={handleCopyText}>Copy Text</button> 
+            <button className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={removeExtraSpaces}>Remove extra spaces</button> 
         </div>
         <div className={`my-1 mx-4 text-${props.mode === "dark"? "light":"dark"}`}>
             <h2>Your text summary</h2>
-            <p className="my-1">{text.split(" ").length-1} words, {text.length} characters</p>
-            <p className="my-1">{(text.split(" ").length-1) * 0.008} Minutes read</p>
+            <p className="my-1">{text.split(" ").filter((element)=>{return (element.length !== 0)}).length} words, {text.length} characters</p>
+            <p className="my-1">{(text.split(" ").filter((element)=>{return (element.length !== 0)}).length) * 0.008} Minutes read</p>
             <span>{vowelCount} Vowels</span>
             <span className="mx-2">{text.length - vowelCount} Consonants</span>
             <h2 className="my-3">Preview</h2>
