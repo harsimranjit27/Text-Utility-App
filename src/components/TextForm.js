@@ -61,11 +61,11 @@ export default function TextForm(props) {
                 <textarea value={text} onChange={handleOnChange} className="form-control" style={{backgroundColor: props.mode==="dark"?"#2d2e2d":"white",
             color: props.mode==="dark"?"white":"black"}} id="myBox" rows="8" ></textarea>
             </div>
-            <button className={`btn btn-${props.btnColor} mx-2 my-2`} onClick={handleUppercaseClick}>Convert to uppercase</button> 
-            <button className={`btn btn-${props.btnColor} mx-2 my-2`} onClick={handleLowercaseClick}>Convert to lowercase</button> 
-            <button className={`btn btn-${props.btnColor} mx-2 my-2`} onClick={handleClearText}>Clear</button> 
-            <button className={`btn btn-${props.btnColor} mx-2 my-2`} onClick={handleCopyText}>Copy Text</button> 
-            <button className={`btn btn-${props.btnColor} mx-2 my-2`} onClick={removeExtraSpaces}>Remove extra spaces</button> 
+            <button className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={handleUppercaseClick}>Convert to uppercase</button> 
+            <button className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={handleLowercaseClick}>Convert to lowercase</button> 
+            <button className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={handleClearText}>Clear</button> 
+            <button className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={handleCopyText}>Copy Text</button> 
+            <button className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={removeExtraSpaces}>Remove extra spaces</button> 
         </div>
         <div className={`my-1 mx-4 text-${props.mode === "dark"? "light":"dark"}`}>
             <h2>Your text summary</h2>

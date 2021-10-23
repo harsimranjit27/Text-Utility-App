@@ -19,6 +19,7 @@ function App() {
   const toggleDarkMode = ()=>{
     if(mode === "light"){
       setMode("dark");
+      setBtnColor("secondary");
       document.body.style.backgroundColor = "#2d2e2d";
       showAlert("Dark mode has been enabled","success");
     }
@@ -84,19 +85,19 @@ function App() {
   return (
     <>
     {/* <Router> */}
-    <Navbar title="TextUtils" aboutText="About TextUtils" mode={mode} toggleGreenMode={toggleGreenMode} togglePurpleMode={togglePurpleMode} toggleRedMode={toggleRedMode} toggleDarkMode={toggleDarkMode}/>
-    <Alert alert={alert}/>
-    <div className="container">
-    {/* <Switch>
+      <Navbar title="TextUtils" aboutText="About" mode={mode} toggleGreenMode={toggleGreenMode} togglePurpleMode={togglePurpleMode} toggleRedMode={toggleRedMode} toggleDarkMode={toggleDarkMode}/>
+      <Alert alert={alert}/>
+      <div className="container">
+        {/* <Switch>
           <Route exact path="/about">
             <About />
-          </Route>
-          <Route exact path="/">
-          </Route>
-          </Switch>
-        </Router> */}
-          <TextForm heading="Enter the text to analyze below" btnColor={btnColor} mode={mode} showAlert={showAlert}/>
-        </div>
+              </Route>
+                <Route exact path="/">
+              </Route>
+        </Switch> */}
+        <TextForm heading="Enter the text to analyze below" btnColor={btnColor} mode={mode} showAlert={showAlert}/>
+      </div>
+    {/* </Router> */}
     </>
   );
 }
